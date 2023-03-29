@@ -1,10 +1,15 @@
 const livros = require('./lista-livros');
 
-let menorPreco = 0;
+function ordenaLivros(arrProdutos, posicaoAtual)
+{
+    let menorPreco = posicaoAtual;
 
-for(let actual = 0; actual < livros.length; actual++){
-    if(livros[actual].preco < livros[menorPreco].preco){
-        menorPreco = actual;
+    for(let actual = posicaoAtual; actual < arrProdutos.length; actual++){
+        if(arrProdutos[actual].preco < arrProdutos[menorPreco].preco){
+            menorPreco = actual;
+        }
     }
+    return menorPreco;
 }
-console.log(`O livro mais barato é o de ${livros[menorPreco].titulo}, ele custa: R$${livros[menorPreco].preco}`);
+
+module.exports = ordenaLivros;
