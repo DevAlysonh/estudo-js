@@ -8,8 +8,17 @@ function combine(input1: number | string, input2: number | string) {
     return result;
 }
 
+function addAndHandle(n1: number, n2:number, cb: (num:number) => void) {
+    const result = n1 + n2;
+    cb(result);
+}
+
 const combineAges = combine(20, 20);
 console.log(combineAges);
 
 const combineNames = combine('Alyson ', 'Henrique!');
 console.log(combineNames);
+
+addAndHandle(10, 20, (result) => {
+    console.log(result);
+})
