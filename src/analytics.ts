@@ -1,1 +1,1 @@
-console.log('Sending...Testando');
+console.log('Para testar o alias....');
