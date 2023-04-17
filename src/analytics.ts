@@ -1,1 +1,0 @@
-console.log('Para testar o alias....');

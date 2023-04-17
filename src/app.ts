@@ -1,5 +1,9 @@
-const button = document.querySelector('button');
+function add(a: number, b: number) {
+    let result;
 
-button?.addEventListener('click', () => {
-    console.log('Cliked!');
-});
+    result = a + b;
+
+    return result;
+}
+
+console.log(add(10, 20));
